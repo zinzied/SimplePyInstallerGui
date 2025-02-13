@@ -37,16 +37,11 @@ PyInstaller GUI is a user-friendly graphical interface designed to simplify the 
 
 ### Running the Application
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/zinzied/PyInstaller-GUI.git
-   cd PyInstaller-GUI
-   ```
+1. Download the latest release of the PyInstaller GUI executable from the [Releases](https://github.com/zinzied/SimplePyInstallerGUI/releases) page.
 
-2. Run the application:
-   ```bash
-   python py2exe.py
-   ```
+2. Run the downloaded `.exe` file to launch the application.
+
+3. Use the GUI to select your Python file, configure the options, and start the conversion process.
 
 3. Use the GUI to select your Python file, configure the options, and start the conversion process.
 
@@ -77,3 +72,8 @@ Feel free to customize the content, especially the icon URL and repository link,
 If you feel like showing your love and/or appreciation for this project, then how about shouting me a coffee or Milk :)
 
 [<img src="https://github.com/zinzied/Website-login-checker/assets/10098794/24f9935f-3637-4607-8980-06124c2d0225">](https://www.buymeacoffee.com/Zied)
+
+
+
+
+
