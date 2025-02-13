@@ -13,7 +13,7 @@ PyInstaller GUI is a user-friendly graphical interface designed to simplify the 
 - **Output Format**: Select between a single executable file (`onefile`) or a directory (`onedir`).
 - **Window Option**: Decide whether the application should run with a console or as a windowed application.
 - **Icon File**: Optionally add a custom icon to your executable.
-- **Hidden Imports**: Automatically detect and add missing modules during the conversion process.
+- **Hidden Imports**: 🚀 Automatically detect and add missing modules during the conversion process 🚀. (NEW FEATURES)
 - **Additional Files and Directories**: Include extra files and directories in your executable.
 - **Progress Bar**: Monitor the conversion progress in real-time.
 - **Threading**: Perform conversions in a separate thread to keep the GUI responsive.
