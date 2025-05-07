@@ -1,6 +1,6 @@
 # 🚀 Python to EXE Converter - Enhanced
 
-A powerful GUI application that simplifies converting Python scripts to standalone executables using PyInstaller, with automatic error detection and resolution.
+A powerful GUI application that simplifies converting Python scripts to standalone executables using PyInstaller, with automatic error detection and resolution, comprehensive notifications, and PyInstaller version management.
 
 ![Python to EXE Converter](https://img.shields.io/badge/Python-to_EXE-blue)
 ![PyInstaller](https://img.shields.io/badge/PyInstaller-Enhanced-green)
@@ -31,24 +31,28 @@ A powerful GUI application that simplifies converting Python scripts to standalo
 
 ### 🔔 Notification System
 - 🔊 Sound alerts when conversion completes or fails
-- 💬 System tray notifications
-- ⏰ Timestamps for all events
+- 💬 System tray notifications with completion status
+- ⏰ Timestamps for all conversion events
+- 🖥️ Desktop notifications when process finishes
 
 ### 🔄 PyInstaller Version Management
-- 🔍 Detects outdated PyInstaller versions
-- 📝 Shows update instructions in the GUI
+- 🔍 Automatically detects PyInstaller installation status
+- ⚠️ Warns about outdated or missing PyInstaller versions
+- 📝 Shows detailed update instructions in the GUI
 - 📋 One-click copy of update commands
+- 🔄 "Check Again" button to verify installation after updating
 
 ### 🎨 User-Friendly Interface
-- 📑 Tabbed interface for basic and advanced options
-- 🔧 Troubleshooting guide with common problems and solutions
+- 📑 Tabbed interface for basic, advanced, logs, and troubleshooting
+- 🔧 Comprehensive troubleshooting guide with common problems and solutions
 - 📋 Log viewer with save and clear options
+- 🔍 Detailed error analysis and suggestions
 
 ## 📋 Requirements
 
 - Python 3.6 or higher
 - PyInstaller 5.6.2 or higher (recommended)
-- PyQt6
+- PyQt5 (version 5.15.0 or higher)
 - Other dependencies listed in `requirements.txt`
 
 ## 🚀 Installation
@@ -97,21 +101,25 @@ python py2exe.py
 
 ### Notification Options
 
-- 🔊 Enable/disable sound notifications
-- 💬 System tray notifications when conversion completes
+- 🔊 Enable/disable sound notifications for completion and errors
+- 💬 System tray notifications with status information
+- ⏰ Timestamps for all conversion events
+- 🔔 Visual alerts for important events
 
 ## 🔧 Troubleshooting
 
 The application includes a dedicated troubleshooting tab with solutions to common problems:
 
-- 📦 Missing modules
-- 🔌 DLL load failures
-- 🚫 Failed execution
-- 🔄 Recursion errors
-- 🖼️ Qt library issues
-- 🧩 Tkinter issues
-- 📁 File not found errors
-- 🔒 Permission issues
+- 📦 Missing modules and import errors
+- 🔌 DLL load failures and dependency issues
+- 🚫 Failed execution and script errors
+- 🔄 Recursion errors and circular imports
+- 🖼️ Qt library issues and binding conflicts
+- 🧩 Tkinter issues and GUI framework problems
+- 📁 File not found errors and resource location
+- 🔒 Permission issues and access restrictions
+- 🔤 Unicode/encoding errors
+- 🖥️ Console vs. GUI application issues
 
 ## 📋 Logs
 
@@ -123,10 +131,12 @@ The application includes a dedicated troubleshooting tab with solutions to commo
 
 The application automatically checks if your PyInstaller version is up to date:
 
-- 🔍 Detects the installed version of PyInstaller
-- ⚠️ Shows a warning if the version is outdated
-- 📝 Provides the exact command to update PyInstaller
+- 🔍 Detects the installed version of PyInstaller (or if it's missing)
+- ⚠️ Shows a warning if the version is outdated or not installed
+- 📝 Provides the exact command to install or update PyInstaller
 - 📋 Allows copying the update command with one click
+- 🔄 "Check Again" button to verify installation after updating
+- 🛡️ Prevents conversion attempts with incompatible PyInstaller versions
 
 ## 📝 License
 
@@ -135,7 +145,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgements
 
 - [PyInstaller](https://www.pyinstaller.org/) for the amazing tool that makes Python to EXE conversion possible
-- [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the GUI framework
+- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) for the GUI framework
 - All contributors and users who have provided feedback and suggestions
 
 ## 🤝 Contributing
