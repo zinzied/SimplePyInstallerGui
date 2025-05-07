@@ -1,4 +1,4 @@
-# 🚀 Python to EXE Converter - Enhanced
+# 🚀 Python to EXE Converter 
 
 A powerful GUI application that simplifies converting Python scripts to standalone executables using PyInstaller, with automatic error detection and resolution, comprehensive notifications, and PyInstaller version management.
 
