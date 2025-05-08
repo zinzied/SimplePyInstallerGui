@@ -1,4 +1,4 @@
-# 🚀 Python to EXE Converter
+# 🚀 Python to EXE Converter - Enhanced
 
 A powerful GUI application that simplifies converting Python scripts to standalone executables using PyInstaller, featuring intelligent error detection and auto-fixing, automatic hidden import resolution, comprehensive notifications, and PyInstaller version management. The converter automatically solves common PyInstaller errors without requiring manual intervention.
 
@@ -141,6 +141,7 @@ The converter automatically detects and fixes these common errors:
 - 🧩 **Tkinter Issues**: Adds necessary tkinter submodules as hidden imports
 - 📁 **File Not Found Errors**: Suggests adding missing files as data files
 - 🔤 **Unicode/Encoding Errors**: Adds appropriate encoding options
+- 💻 **Terminal Application Issues**: Detects terminal applications and warns if using windowed mode
 
 ### 💡 Error Resolution Process
 
@@ -183,6 +184,12 @@ The application automatically checks if your PyInstaller version is up to date:
 - **Intelligent Error Analysis**: The converter now automatically detects and fixes common PyInstaller errors
 - **Multi-Attempt Conversion**: Makes up to 3 conversion attempts, applying incremental fixes between attempts
 - **Detailed Error Logging**: Provides clear explanations of errors and the fixes being applied
+
+#### 💻 Terminal Application Support
+- **Automatic Detection**: Identifies terminal applications by analyzing code patterns
+- **Smart Mode Selection**: Warns if a terminal application is being built with windowed mode
+- **Comprehensive Guidance**: Detailed troubleshooting section for terminal application issues
+- **Path Resolution Help**: Code templates for handling file paths correctly in packaged applications
 
 #### 🧩 Improved Hidden Imports Management
 - **Automatic Detection**: Significantly improved detection of required hidden imports
