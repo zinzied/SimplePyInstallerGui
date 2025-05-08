@@ -1,6 +1,6 @@
-# 🚀 Python to EXE Converter 
+# 🚀 Python to EXE Converter
 
-A powerful GUI application that simplifies converting Python scripts to standalone executables using PyInstaller, with automatic error detection and resolution, comprehensive notifications, and PyInstaller version management.
+A powerful GUI application that simplifies converting Python scripts to standalone executables using PyInstaller, featuring intelligent error detection and auto-fixing, automatic hidden import resolution, comprehensive notifications, and PyInstaller version management. The converter automatically solves common PyInstaller errors without requiring manual intervention.
 
 ![Python to EXE Converter](https://img.shields.io/badge/Python-to_EXE-blue)
 ![PyInstaller](https://img.shields.io/badge/PyInstaller-Enhanced-green)
@@ -8,16 +8,21 @@ A powerful GUI application that simplifies converting Python scripts to standalo
 
 ## ✨ Features
 
-### 🔄 Automatic Dependency Analysis
-- 🔍 Automatically scans Python files for imports
-- 📊 Pre-emptively identifies problematic packages
-- 🧩 Suggests hidden imports based on detected dependencies
+### 🔄 Intelligent Dependency Analysis and Hidden Imports
+- 🔍 **Smart Import Detection**: Automatically scans Python files to identify all imports and dependencies
+- 📊 **Problematic Package Database**: Contains a comprehensive database of packages known to cause PyInstaller issues
+- 🧩 **Automatic Hidden Import Resolution**: Identifies and adds necessary hidden imports without manual intervention
+- 🔗 **Submodule Detection**: Recognizes when specific submodules need to be included as hidden imports
+- 📦 **Package Relationship Analysis**: Understands dependencies between packages to ensure complete inclusion
+- 🧠 **Learning from Errors**: Adds missing imports discovered during failed conversion attempts
 
-### 🛠️ Enhanced Error Detection and Resolution
-- 🔧 Automatically detects and fixes common PyInstaller errors
-- 🔄 Multiple retry strategies for different types of errors
-- 🧪 Improved pattern matching for detecting missing modules
-- 🔌 Detection and handling for DLL errors
+### 🛠️ Advanced Error Detection and Auto-Fixing
+- 🔧 **Intelligent Error Analysis**: Automatically detects, diagnoses, and fixes common PyInstaller errors in real-time
+- 🔄 **Multi-Attempt Conversion**: Makes up to 3 conversion attempts, applying incremental fixes between attempts
+- 🧪 **Pattern Recognition**: Uses advanced regex patterns to identify specific error types in conversion output
+- 🔌 **DLL Error Resolution**: Automatically detects missing DLLs and adds them from System32 when available
+- 🔍 **Detailed Error Logging**: Provides clear explanations of errors and the fixes being applied
+- 💡 **Solution Suggestions**: Offers specific solutions for errors that can't be automatically fixed
 
 ### 📊 Progress Tracking
 - 📈 Real-time progress updates with percentage completion
@@ -87,11 +92,25 @@ python py2exe.py
 
 ### Advanced Options
 
-- 🧩 Add hidden imports manually or let the app detect them
-- 📁 Add additional files and directories to include in the executable
+#### 🧩 Hidden Imports Management
+- **Automatic Detection**: Let the app automatically detect and add required hidden imports
+- **Manual Addition**: Add specific hidden imports that you know are needed
+- **Import Database**: Benefit from the app's database of known problematic packages and their required imports
+- **Dynamic Learning**: The app learns from conversion errors and adds missing imports automatically
+
+#### 📁 Additional Files and Resources
+- **Multiple File Selection**: Select multiple files at once to include in your executable
+- **Directory Support**: Add entire directories with automatic destination path assignment
+- **Destination Path Editing**: Double-click any item to edit its destination path
+- **Batch Operations**: Select multiple items for removal or editing
+
+#### ⚙️ Other Advanced Options
 - 🖼️ Specify an icon for the executable
-- ⚙️ Configure additional PyInstaller options
+- 🧹 Clean build files before building (--clean)
+- ✂️ Strip binaries to reduce size (--strip)
+- 🔒 Request UAC elevation (--uac-admin)
 - 📝 Generate and edit a .spec file for more control
+- ⌨️ Add custom command-line options
 
 ### Performance Options
 
@@ -106,20 +125,38 @@ python py2exe.py
 - ⏰ Timestamps for all conversion events
 - 🔔 Visual alerts for important events
 
-## 🔧 Troubleshooting
+## 🔧 Automatic Error Detection and Resolution
 
-The application includes a dedicated troubleshooting tab with solutions to common problems:
+The application includes powerful error detection and auto-fixing capabilities:
 
-- 📦 Missing modules and import errors
-- 🔌 DLL load failures and dependency issues
-- 🚫 Failed execution and script errors
-- 🔄 Recursion errors and circular imports
-- 🖼️ Qt library issues and binding conflicts
-- 🧩 Tkinter issues and GUI framework problems
-- 📁 File not found errors and resource location
-- 🔒 Permission issues and access restrictions
-- 🔤 Unicode/encoding errors
-- 🖥️ Console vs. GUI application issues
+### 🔍 Automatically Detected Errors
+
+The converter automatically detects and fixes these common errors:
+
+- 📦 **Missing Module Errors**: Identifies and adds required hidden imports
+- 🔌 **DLL Load Failures**: Detects missing DLLs and adds them from System32
+- 🚫 **Failed Execution Errors**: Adds debug options to get more information
+- 🔄 **Recursion Errors**: Excludes problematic modules causing circular imports
+- 🖼️ **Qt Binding Conflicts**: Special handling for multiple Qt frameworks (PyQt5/PyQt6)
+- 🧩 **Tkinter Issues**: Adds necessary tkinter submodules as hidden imports
+- 📁 **File Not Found Errors**: Suggests adding missing files as data files
+- 🔤 **Unicode/Encoding Errors**: Adds appropriate encoding options
+
+### 💡 Error Resolution Process
+
+1. **Error Detection**: Parses conversion output using regex patterns to identify specific errors
+2. **Solution Application**: Automatically applies the appropriate fix based on error type
+3. **Retry Mechanism**: Makes up to 3 conversion attempts, applying fixes between attempts
+4. **Detailed Logging**: Provides clear explanations of errors and fixes in the logs
+
+### 📋 Comprehensive Troubleshooting Tab
+
+The dedicated troubleshooting tab provides detailed solutions for issues that may require manual intervention:
+
+- 📚 **Common Problems Database**: Extensive collection of PyInstaller issues and solutions
+- 🔍 **Error Lookup**: Find solutions for specific error messages
+- 🖼️ **Special Qt Section**: Detailed guidance for handling Qt framework issues
+- 🔧 **Step-by-Step Solutions**: Clear instructions for resolving complex problems
 
 ## 📋 Logs
 
@@ -137,6 +174,25 @@ The application automatically checks if your PyInstaller version is up to date:
 - 📋 Allows copying the update command with one click
 - 🔄 "Check Again" button to verify installation after updating
 - 🛡️ Prevents conversion attempts with incompatible PyInstaller versions
+
+## 🔄 Recent Updates
+
+### ✨ New Features
+
+#### 🛠️ Enhanced Error Detection and Auto-Fixing
+- **Intelligent Error Analysis**: The converter now automatically detects and fixes common PyInstaller errors
+- **Multi-Attempt Conversion**: Makes up to 3 conversion attempts, applying incremental fixes between attempts
+- **Detailed Error Logging**: Provides clear explanations of errors and the fixes being applied
+
+#### 🧩 Improved Hidden Imports Management
+- **Automatic Detection**: Significantly improved detection of required hidden imports
+- **Expanded Database**: Added more known problematic packages and their required imports
+- **Dynamic Learning**: The app now learns from conversion errors and adds missing imports automatically
+
+#### 📁 Enhanced File Management
+- **Multiple File Selection**: Now supports selecting multiple files at once
+- **Improved Directory Handling**: Better support for adding directories with automatic destination paths
+- **Destination Path Editing**: Double-click any item to edit its destination path
 
 ## 📝 License
 
