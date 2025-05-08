@@ -64,8 +64,8 @@ A powerful GUI application that simplifies converting Python scripts to standalo
 
 1. Clone this repository or download the source code:
 ```bash
-git clone https://github.com/zinzied/python-to-exe-enhanced.git
-cd python-to-exe-enhanced
+git clone https://github.com/zinzied/SimplePyInstallerGui-Enhanced.git
+cd SimplePyInstallerGui-Enhanced
 ```
 
 2. Install the required dependencies:
